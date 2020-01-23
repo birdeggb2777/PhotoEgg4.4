@@ -49,6 +49,19 @@ namespace PhotoEgg4._3
                 Main_Bitmap = new Bitmap(openFileDialog1.FileName);
                 // Main_Bitmap.SetResolution(1,1);
                 NowPicture_X = (this.Width - Main_Bitmap.Width) / 2; NowPicture_Y = (this.Height - Main_Bitmap.Height) / 2;
+
+                if ((int)(Main_Bitmap.Height * StretchRange) > this.Height ||
+                    (int)(Main_Bitmap.Width * StretchRange) > this.Width)
+                {
+                    while ((int)(Main_Bitmap.Height * StretchRange) > this.Height ||
+                    (int)(Main_Bitmap.Width * StretchRange) > this.Width)
+                    {
+                        StretchRange /= 1.1;
+                    }
+                    NowPicture_X = (int)(Main_Bitmap.Width * StretchRange);
+                    NowPicture_Y = 0;
+                }
+                //  MessageBox.Show("" + NowPicture_X);
                 reflesh();
 
             }
@@ -69,17 +82,20 @@ namespace PhotoEgg4._3
         private void MouseWheelHandler(object sender, System.Windows.Forms.MouseEventArgs e)
         {
             // If the mouse wheel delta is positive, move the box up.
+            double tempRange = StretchRange;
             if (e.Delta > 0)
             {
                 StretchRange *= 1.1;
-
+                NowPicture_X -=((int)(Main_Bitmap.Width * StretchRange)- (int)(Main_Bitmap.Width * tempRange))/2;
+                NowPicture_Y -= ((int)(Main_Bitmap.Height * StretchRange) - (int)(Main_Bitmap.Height * tempRange))/2;
             }
 
             // If the mouse wheel delta is negative, move the box down.
             if (e.Delta < 0)
             {
                 StretchRange /= 1.1;
-
+                NowPicture_X -= ((int)(Main_Bitmap.Width * StretchRange) - (int)(Main_Bitmap.Width * tempRange)) / 2;
+                NowPicture_Y -= ((int)(Main_Bitmap.Height * StretchRange) - (int)(Main_Bitmap.Height * tempRange)) / 2;
             }
             //  NowPicture_X = NowPicture_X+(int)(Main_Bitmap.Width - (Main_Bitmap.Width * StretchRange))/2;
             // NowPicture_Y = NowPicture_Y + (int)(Main_Bitmap.Height - (Main_Bitmap.Height * StretchRange)) / 2;
@@ -217,6 +233,7 @@ namespace PhotoEgg4._3
                 MessageBox.Show("");
             }
             MouseDownClick = false;
+            GC.Collect();
         }
         private void DrawOil(int OpointX, int OpointY, int pointX, int pointY)
         {
@@ -246,8 +263,8 @@ namespace PhotoEgg4._3
             unsafe
             {
                 Cv_Operate.FillOil((byte*)(MyBmpData.Scan0), MyNewBmp.Width, MyNewBmp.Height, 4, (int)(X / StretchRange), (int)(Y / StretchRange), (int)(numericUpDown4.Value), (byte)PixelDraw_Operate.Color_B, (byte)PixelDraw_Operate.Color_G, (byte)PixelDraw_Operate.Color_R);
-          
-               // PixelDraw_Operate.FillOil((byte*)(MyBmpData.Scan0), MyNewBmp.Width, MyNewBmp.Height, 4, (int)(X / StretchRange), (int)(Y / StretchRange), (int)(numericUpDown4.Value));
+
+                // PixelDraw_Operate.FillOil((byte*)(MyBmpData.Scan0), MyNewBmp.Width, MyNewBmp.Height, 4, (int)(X / StretchRange), (int)(Y / StretchRange), (int)(numericUpDown4.Value));
             }
             MyNewBmp.UnlockBits(MyBmpData);
 
