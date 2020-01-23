@@ -1,0 +1,15 @@
+﻿  CvDrawing.cpp
+C:\opencv\build\include\opencv2\core\cuda.inl.hpp(105): warning C4793: 'cv::cuda::GpuMat::GpuMat': 函式會編譯成機器碼:
+  	找到受控碼中不支援的內建
+C:\opencv\build\include\opencv2\core\cuda.inl.hpp(395): warning C4793: 'cv::cuda::HostMem::HostMem': 函式會編譯成機器碼:
+  	找到受控碼中不支援的內建
+C:\opencv\build\include\opencv2\core\mat.inl.hpp(530): warning C4793: 'cv::Mat::Mat': 函式會編譯成機器碼:
+  	找到受控碼中不支援的內建
+C:\opencv\build\include\opencv2\core\mat.inl.hpp(850): warning C4793: 'cv::Mat::release': 函式會編譯成機器碼:
+  	找到受控碼中不支援的內建
+C:\opencv\build\include\opencv2\core\mat.inl.hpp(2171): warning C4793: 'cv::SparseMat::addref': 函式會編譯成機器碼:
+  	找到受控碼中不支援的內建
+C:\opencv\build\include\opencv2\core\mat.inl.hpp(3771): warning C4793: 'cv::UMat::addref': 函式會編譯成機器碼:
+  	找到受控碼中不支援的內建
+  AssemblyInfo.obj : 發現 MSIL 模組。MSIL 的累加連結已停用。正在執行完整連結
+  PenDrawing.vcxproj -> E:\桌面碟\專案資料夾\PhotoEgg4.4\x64\Debug\PenDrawing.dll

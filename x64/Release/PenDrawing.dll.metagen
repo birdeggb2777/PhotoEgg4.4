@@ -1,0 +1,98 @@
+ImageRuntimeVersion: v4.0.30319
+Assembly PenDrawing, Version=1.0.*, Culture=不因語言而異 (不因國別而異): 
+	hash=SHA1, flags=PublicKey
+Assembly mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089: 
+	hash=None, flags=None
+Assembly System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089: 
+	hash=None, flags=None
+Assembly System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089: 
+	hash=None, flags=None
+Assembly System.Xml, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089: 
+	hash=None, flags=None
+Class CvDrawing.CvClass: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Methods:
+    FillOil(Byte*, Int32 IsConst, Int32 IsConst, Int32 IsConst, Int32 IsConst, Int32 IsConst, Int32 IsConst, Byte, Byte, Byte): PrivateScope, Public, HideBySig
+Class PenDrawing.DrawClass: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Fields:
+    UInt32 Color_R : Public
+    UInt32 Color_G : Public
+    UInt32 Color_B : Public
+    Int32 Reference_width : Public
+    Int32 Reference_height : Public
+    Byte** Reference_fp : Public
+    Int32 UnSharp_Mark_width : Public
+    Int32 UnSharp_Mark_height : Public
+    Byte** UnSharp_Mark_fp : Public
+    Int32 Brush_width : Public
+    Int32 Brush_height : Public
+    Byte** Brush_fp : Public
+  Methods:
+    Black(Byte*, Int32, Int32, Int32, Int32, Int32, Int32, Int32): PrivateScope, Public, HideBySig
+    BlackBrush(Byte*, Int32, Int32, Int32, Int32, Int32, Int32): PrivateScope, Public, HideBySig
+    CreateUnSharpMark(Int32, Int32): PrivateScope, Public, HideBySig
+    CreateUnSharpMark(Byte*, Int32, Int32, Int32): PrivateScope, Public, HideBySig
+    CreateBrush(Int32, Int32): PrivateScope, Public, HideBySig
+    FillOil(Byte*, Int32 IsConst, Int32 IsConst, Int32 IsConst, Int32 IsConst, Int32 IsConst, Int32 IsConst): PrivateScope, Public, HideBySig
+    checkColorRange(Int32, Int32, Int32): PrivateScope, Public, HideBySig
+    BackToReroTest(Byte**, vector<int\,std::allocator<int> >*, vector<int\,std::allocator<int> >*, Int32, Int32, Int32, Int32, Int32, Int32): PrivateScope, Public, HideBySig
+    BackToRero(Byte**, vector<int\,std::allocator<int> >*, vector<int\,std::allocator<int> >*, Int32, Int32, Int32, Int32, Int32, Int32): PrivateScope, Public, HideBySig
+    FindByVector(vector<int\,std::allocator<int> >*, vector<int\,std::allocator<int> >*, Int32, Int32): PrivateScope, Public, HideBySig
+    colorOrder(Byte* IsImplicitlyDereferenced, Byte* IsImplicitlyDereferenced, Byte* IsImplicitlyDereferenced, Int32): PrivateScope, Public, Static, HideBySig
+    ConvertHSV_(Byte*, Int32, Int32, Int32, Int32, Int32, Int32, Boolean(HasFieldMarshal), Int32, Int32, Int32): PrivateScope, Public, Static, HideBySig
+    ConvertHSV(Byte*, Int32, Int32, Int32, Int32, Int32, Int32, Boolean(HasFieldMarshal), Int32): PrivateScope, Public, HideBySig
+    HSVMin(Double, Double): PrivateScope, Public, Static, HideBySig
+    HSVMax(Double, Double): PrivateScope, Public, Static, HideBySig
+    BGRToHSV(Int32, Int32, Int32, Byte* IsImplicitlyDereferenced, Byte* IsImplicitlyDereferenced, Byte* IsImplicitlyDereferenced, Boolean(HasFieldMarshal)): PrivateScope, Public, Static, HideBySig
+    HSVToBGR(Double, Double, Double, Byte* IsImplicitlyDereferenced, Byte* IsImplicitlyDereferenced, Byte* IsImplicitlyDereferenced): PrivateScope, Public, Static, HideBySig
+Class pix.pixelOperate: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Methods:
+    colorTo255(Byte*, Int32, Int32, Int32): PrivateScope, Public, HideBySig
+    removeBackGround(Byte*, Int32 IsConst, Int32 IsConst, Int32 IsConst, Int32 IsConst, Int32 IsConst, Int32 IsConst): PrivateScope, Public, HideBySig
+    checkColorRange(Int32, Int32, Int32): PrivateScope, Public, HideBySig
+    BackToRero(Byte**, vector<int\,std::allocator<int> >*, vector<int\,std::allocator<int> >*, Int32, Int32, Int32, Int32, Int32, Int32): PrivateScope, Public, HideBySig
+    FillTest(Byte*, Int32, Int32, Int32): PrivateScope, Public, HideBySig
+    FindByVector(vector<int\,std::allocator<int> >*, vector<int\,std::allocator<int> >*, Int32, Int32): PrivateScope, Public, HideBySig
+    FT(Byte**, vector<int\,std::allocator<int> >*, vector<int\,std::allocator<int> >*, Int32, Int32): PrivateScope, Public, HideBySig
+    Overexposed(Byte*, Int32, Int32, Int32): PrivateScope, Public, HideBySig
+    rgbNormal(Byte*, Int32, Int32, Int32, Int32, Int32, Int32): PrivateScope, Public, HideBySig
+    Binarization(Byte*, Int32, Int32, Int32, Int32): PrivateScope, Public, HideBySig
+    colorToGray(Byte*, Int32, Int32, Int32): PrivateScope, Public, HideBySig
+    horizontalFlip(Byte*, Byte*, Int32, Int32, Int32): PrivateScope, Public, HideBySig
+    AllFlip(Byte*, Byte*, Int32, Int32, Int32): PrivateScope, Public, HideBySig
+    verticalFlip(Byte*, Byte*, Int32, Int32, Int32): PrivateScope, Public, HideBySig
+    kaleidoscope(Byte*, Byte*, Int32, Int32, Int32): PrivateScope, Public, HideBySig
+    brightness(Byte*, Int32, Int32, Int32, Int32): PrivateScope, Public, HideBySig
+    brightness2(Byte*, Int32, Int32, Int32, Double): PrivateScope, Public, HideBySig
+    contrast(Byte*, Int32, Int32, Int32, Int32): PrivateScope, Public, HideBySig
+    BrightnessContrast(Byte*, Int32, Int32, Int32, Int32, Int32): PrivateScope, Public, HideBySig
+    ScanningLine(Byte*, Int32, Int32, Int32, Int32, Int32): PrivateScope, Public, HideBySig
+    airbrush(Byte*, Byte*, Int32, Int32, Int32 IsConst, Boolean(HasFieldMarshal), Int32 IsConst): PrivateScope, Public, HideBySig
+    sharp(Byte*, Byte*, Int32, Int32, Int32, Int32): PrivateScope, Public, HideBySig
+    blurry(Byte*, Int32, Int32, Int32, Int32): PrivateScope, Public, HideBySig
+    ColorNoise(Byte*, Int32 IsConst, Int32 IsConst, Int32 IsConst, Double IsConst): PrivateScope, Public, HideBySig
+    ColorNoiseThread(Byte*, Int32 IsConst, Int32 IsConst, Int32 IsConst, Double IsConst, Int32, Int32): PrivateScope, Public, Static, HideBySig
+    oilpaint(Byte*, Byte*, Int32, Int32, Int32, Int32, Double): PrivateScope, Public, HideBySig
+    oilpaintThread(Byte*, Byte*, Int32, Int32, Int32, Int32, Double, Int32, Int32): PrivateScope, Public, Static, HideBySig
+    pasteImage(Byte*, Byte*, Int32, Int32, Int32, Int32, Int32, Int32, Int32): PrivateScope, Public, HideBySig
+    tile(Byte*, Int32, Int32, Int32, Int32, Int32): PrivateScope, Public, HideBySig
+    mosaic(Byte*, Byte*, Int32 IsConst, Int32 IsConst, Int32 IsConst, Int32 IsConst): PrivateScope, Public, HideBySig
+    emboss(Byte*, Byte*, Int32, Int32, Int32, Int32, Int32, Boolean(HasFieldMarshal)): PrivateScope, Public, HideBySig
+    ToneSeparation(Byte*, Int32, Int32, Int32, Int32): PrivateScope, Public, HideBySig
+    blurry3BGR(Byte**, Byte**, Int32, Int32, Int32, Int32, Int32, Int32): PrivateScope, Public, Static, HideBySig
+    blurry4BGR(Byte**, Byte**, Int32, Int32, Int32, Int32, Int32, Int32): PrivateScope, Public, Static, HideBySig
+    blurry3(Byte*, Byte*, Int32, Int32, Int32, Int32): PrivateScope, Public, HideBySig
+    colorOrder(Byte* IsImplicitlyDereferenced, Byte* IsImplicitlyDereferenced, Byte* IsImplicitlyDereferenced, Int32): PrivateScope, Public, Static, HideBySig
+    ConvertHSV_(Byte*, Int32, Int32, Int32, Int32, Int32, Int32, Boolean(HasFieldMarshal), Int32, Int32, Int32): PrivateScope, Public, Static, HideBySig
+    ConvertHSV(Byte*, Int32, Int32, Int32, Int32, Int32, Int32, Boolean(HasFieldMarshal), Int32): PrivateScope, Public, HideBySig
+    HSVMin(Double, Double): PrivateScope, Public, Static, HideBySig
+    HSVMax(Double, Double): PrivateScope, Public, Static, HideBySig
+    BGRToHSV(Int32, Int32, Int32, Byte* IsImplicitlyDereferenced, Byte* IsImplicitlyDereferenced, Byte* IsImplicitlyDereferenced, Boolean(HasFieldMarshal)): PrivateScope, Public, Static, HideBySig
+    HSVToBGR(Double, Double, Double, Byte* IsImplicitlyDereferenced, Byte* IsImplicitlyDereferenced, Byte* IsImplicitlyDereferenced): PrivateScope, Public, Static, HideBySig
+    Fluorescent(Byte*, Byte*, Int32, Int32, Int32, Int32): PrivateScope, Public, HideBySig
+    sharptest(Byte*, Byte*, Int32, Int32, Int32, Int32, Int32): PrivateScope, Public, HideBySig
+    sharptest00(Byte*, Byte*, Int32, Int32, Int32, Int32): PrivateScope, Public, HideBySig
+    sharptest0(Byte*, Byte*, Int32, Int32, Int32, Int32): PrivateScope, Public, HideBySig
+    sharp2222(Byte*, Byte*, Int32, Int32, Int32, Int32): PrivateScope, Public, HideBySig
