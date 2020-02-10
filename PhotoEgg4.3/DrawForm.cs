@@ -210,6 +210,7 @@ namespace PhotoEgg4._3
             {
 
             }
+            GC.Collect();
         }
         private void Form_MouseUp(object sender, MouseEventArgs e)
         {
@@ -267,7 +268,7 @@ namespace PhotoEgg4._3
                 // PixelDraw_Operate.FillOil((byte*)(MyBmpData.Scan0), MyNewBmp.Width, MyNewBmp.Height, 4, (int)(X / StretchRange), (int)(Y / StretchRange), (int)(numericUpDown4.Value));
             }
             MyNewBmp.UnlockBits(MyBmpData);
-
+            GC.Collect();
         }
         private void DrawBrush(int OpointX, int OpointY, int pointX, int pointY)
         {
@@ -318,6 +319,7 @@ namespace PhotoEgg4._3
                 }
             }
             MyNewBmp.UnlockBits(MyBmpData);
+            GC.Collect();
         }
         /*  private void PenSizeText1_KeyPress(object sender, KeyPressEventArgs e)
           {
@@ -468,7 +470,7 @@ namespace PhotoEgg4._3
                 }
                 catch {/* MessageBox.Show("error");*/ }
             }
-
+            GC.Collect();
         }
         private void timer1_Tick(object sender, EventArgs e)
         {

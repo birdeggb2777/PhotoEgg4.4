@@ -143,6 +143,7 @@ namespace PenDrawing {
 					}
 				}
 				delete[] fp;*/
+			delete[] fp;
 		}
 		int Reference_width = 0;
 		int Reference_height = 0;
